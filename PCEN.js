@@ -51,7 +51,7 @@ function tampilkanRiwayatPembelian(_0xb977e1) {
                 _0x590469 = isRupiah
                   ? _0x341f5a.harga.toLocaleString('id-ID', {
                       style: 'currency',
-                      currency: 'Ph Bill',
+                      currency: 'PhBill',
                       minimumFractionDigits: 0,
                     })
                   : _0x341f5a.harga.toLocaleString('en-US', {
@@ -99,7 +99,7 @@ function getHarga(_0x14632a) {
   return isRupiah
     ? _0x302480.toLocaleString('id-ID', {
         style: 'currency',
-        currency: 'Ph Bill',
+        currency: 'PhBill',
         minimumFractionDigits: 0,
       })
     : _0x302480.toLocaleString('en-US', {
@@ -126,7 +126,7 @@ function tampilkanDetailPembelian() {
             _0xe58e60 = _0x5e3f5c.email,
             _0x34c576 = _0x5e3f5c.username,
             _0x38bc84 = getHarga(_0x32f10a),
-            _0x9867c7 = isRupiah ? 'Ph Bill' : 'Kyats'
+            _0x9867c7 = isRupiah ? 'PhBill' : 'Kyats'
           document.getElementById('detailUsername').innerText =
             _0x34c576 || 'Tidak Tersedia'
           document.getElementById('detailEmail').innerText = _0xe58e60
@@ -136,7 +136,7 @@ function tampilkanDetailPembelian() {
             ? (document.getElementById('detailHarga').innerText =
                 _0x38bc84.toLocaleString('id-ID') + ' ' + _0x9867c7)
             : (document.getElementById('detailHarga').innerText =
-                _0x38bc84.toLocaleString('en-Kyats') + ' ' + _0x9867c7)
+                _0x38bc84.toLocaleString('en-USD') + ' ' + _0x9867c7)
           document.getElementById('detailJumlahCoin').innerText = _0x32f10a
         } else {
           console.error('Dokumen pengguna tidak ditemukan.')
@@ -463,7 +463,7 @@ function buatOpsiCoin() {
       },
       tdtNu: 'id-ID',
       fQfEV: 'currency',
-      vEcsP: 'Ph Bill',
+      vEcsP: 'PhBill',
       pSYxD: 'en-US',
       Jnyxx: 'Kyats',
     }
@@ -677,7 +677,7 @@ function buatOpsiCoin() {
       _0x330ce1 = isRupiah
         ? _0x1ecfac.price.toLocaleString('id-ID', {
             style: 'currency',
-            currency: 'Ph Bill',
+            currency: 'PhBill',
             minimumFractionDigits: 0,
           })
         : _0x1ecfac.price.toLocaleString('en-US', {
