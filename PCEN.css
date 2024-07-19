@@ -1,0 +1,381 @@
+<style>
+.popupcc_buycoin {
+    display: none;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    font-size: 1rem;
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+}
+
+.popupcc_buycoin .popup {
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 13px 10px #242424de;
+    text-align: left;
+    overflow: auto;
+    max-height: 100%;
+    height: 600px;
+    min-width: 300px;
+    max-width: 680px;
+}
+
+/* Media Queries */
+
+/* Small devices (landscape phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .popupcc_buycoin .popup {
+        height: 600px;
+        width: 90%;
+    }
+    .cardCoin {
+        width: 150px;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .popupcc_buycoin .popup {
+        height: 700px;
+        max-width: 680px;
+        min-width: 300px;
+    }
+    .cardCoin {
+        width: 150px;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .popupcc_buycoin .popup {
+        height: 760px;
+        max-width: 680px;
+        min-width: 300px;
+    }
+    .cardCoin {
+        width: 150px;
+        height: auto;
+        margin: 0;
+    }
+}
+
+/* Extra large devices (large desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .popupcc_buycoin .popup {
+        height: 780px;
+        max-width: 680px;
+        min-width: 300px;
+    }
+    .cardCoin {
+        width: 19rem;
+        height: 19rem;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .popupcc_buycoin .popup {
+        height: 800px;
+        max-width: 680px;
+        min-width: 300px;
+    }
+    .cardCoin {
+        width: 19rem;
+        height: 19rem;
+    }
+}
+
+.popupcc_buycoin .popup {
+    background-color: #222;
+    padding: 20px;
+}
+
+.popupcc_buycoin .popup h3 {
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+.popupcc_buycoin .popup p {
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+.custum-file-upload {
+    height: 200px;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #e8e8e8;
+    background-color: #212121;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 48px 35px -48px #e8e8e8;
+    position: relative;
+}
+
+.custum-file-upload .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .icon svg {
+    height: 80px;
+    fill: #e8e8e8;
+}
+
+.custum-file-upload .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custum-file-upload .text span {
+    font-weight: 400;
+    color: #e8e8e8;
+}
+
+.custum-file-upload input {
+    display: none;
+}
+
+.popupcc_buycoin .popup .btn_paymentCoin[disabled] {
+    background-color: #ccc;
+    color: #222;
+}
+
+.popupcc_buycoin .popup .kbjlink {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.kbj {
+    color: #ccc;
+}
+
+.btn_paymentCoin {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid #fff;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+.btn_paymentCoin .svgIcon {
+    width: 16px;
+}
+
+.btn_paymentCoin .svgIcon path {
+    fill: white;
+}
+
+.btn_paymentCoin::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+}
+
+.btn_paymentCoin:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%, -50%);
+    border-radius: 0;
+}
+
+.btn_paymentCoin:active {
+    transform: translate(5px, 5px);
+    transition-duration: .3s;
+}
+
+.cancelOrderCoin {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: 1px solid #fff;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+}
+
+.button_paymentCoin {
+    text-decoration: none;
+    line-height: 1;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, .05);
+    background-color: #fff;
+    color: #121212;
+    border: none;
+    cursor: pointer;
+}
+
+.button_paymentCoin .button-decor {
+    position: absolute;
+    inset: 0;
+    background-color: var(--clr);
+    transform: translateX(-100%);
+    transition: transform .3s;
+    z-index: 0;
+}
+
+.button_paymentCoin .button-content {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+.button_paymentCoin .button__icon {
+    width: 48px;
+    height: 40px;
+    background-color: var(--clr);
+    display: grid;
+    place-items: center;
+}
+
+.button_paymentCoin .button__text {
+    display: inline-block;
+    transition: color .2s;
+    padding: 2px 1.5rem 2px;
+    padding-left: .75rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+.button_paymentCoin:hover .button__text {
+    color: #fff;
+}
+
+.button_paymentCoin:hover .button-decor {
+    transform: translate(0);
+}
+
+[data-coin="coin6"] .discountpriceCoin::before {
+    content: "Rp20.000";
+    color: #aaa;
+    text-decoration: line-through;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    font-size: 12px;
+}
+
+[data-coin="coin7"] .discountpriceCoin::before {
+    content: "Rp25.000";
+    color: #aaa;
+    text-decoration: line-through;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    font-size: 12px;
+}
+
+[data-coin="coin8"] .discountpriceCoin::before {
+    content: "Rp30.000";
+    color: #aaa;
+    text-decoration: line-through;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    font-size: 12px;
+}
+
+[data-coin="coin9"] .discountpriceCoin::before {
+    content: "Rp40.000";
+    color: #aaa;
+    text-decoration: line-through;
+    position: absolute;
+    top: -15px;
+    right: 0;
+    font-size: 12px;
+}
+
+.coin-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cardCoin {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    width: 19rem;
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.cardCoin.selected {
+    border: 2px solid #fff;
+}
+
+.priceCoin,
+.discountpriceCoin {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.discountpriceCoin {
+    position: relative;
+}
+
+.cardCoin .coin-description {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.selected-card-title {
+    width: max-content;
+    text-align: right;
+    margin-left: auto;
+    position: relative;
+    left: 25px;
+}
+</style>
